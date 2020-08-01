@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLightTheme" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-x0-l9K">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-x0-l9K">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dYP-bj-rmJ">
@@ -27,7 +27,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVs-fc-2Fx">
                                                 <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-tm-TjI">
                                                 <rect key="frame" x="334" y="1" width="40" height="37.666666666666671"/>
@@ -37,13 +37,16 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2L-tJ-fM3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="d3I-FK-b99"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Istanbul" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwg-cb-AUU" userLabel="CityName">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Istanbul" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="xwg-cb-AUU" userLabel="CityName">
                                         <rect key="frame" x="110.33333333333334" y="60.000000000000007" width="263.66666666666663" height="95.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                         <nil key="textColor"/>
@@ -55,13 +58,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="atJ-3t-U3P">
                                                 <rect key="frame" x="0.0" y="0.0" width="148" height="143.33333333333334"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-jP-LZ9" userLabel="Temperature">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-jP-LZ9" userLabel="Temperature">
                                                         <rect key="frame" x="0.0" y="0.0" width="148" height="71.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7R-BT-wtQ" userLabel="Humidity">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="a7R-BT-wtQ" userLabel="Humidity">
                                                         <rect key="frame" x="58.66666666666665" y="71.666666666666657" width="89.333333333333314" height="71.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
@@ -79,7 +82,7 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sky is clear" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ra7-CW-QiI" userLabel="WeatherDescription">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sky is clear" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ra7-CW-QiI" userLabel="WeatherDescription">
                                         <rect key="frame" x="252.66666666666671" y="339" width="121.33333333333334" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.36690414507772018" green="0.36690414507772018" blue="0.36690414507772018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -105,11 +108,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="CityName" destination="xwg-cb-AUU" id="eo1-2d-F4G"/>
-                        <outlet property="Humidity" destination="a7R-BT-wtQ" id="lTa-8y-NaZ"/>
-                        <outlet property="Temperature" destination="Gey-jP-LZ9" id="gdc-UR-DlA"/>
-                        <outlet property="WeatherDescription" destination="ra7-CW-QiI" id="wdG-sP-iQI"/>
-                        <outlet property="WeatherImage" destination="B55-TX-jJE" id="oXh-zb-jl0"/>
+                        <outlet property="cityNameLabel" destination="xwg-cb-AUU" id="fls-Dg-zrr"/>
+                        <outlet property="humidityLabel" destination="a7R-BT-wtQ" id="pN1-BH-bqe"/>
+                        <outlet property="searchTextField" destination="pVs-fc-2Fx" id="BR8-9G-Z2V"/>
+                        <outlet property="temperatureLabel" destination="Gey-jP-LZ9" id="AWf-1N-3vj"/>
+                        <outlet property="weatherDescriptionLabel" destination="ra7-CW-QiI" id="hEG-EK-YUh"/>
+                        <outlet property="weatherImage" destination="B55-TX-jJE" id="ccn-Ea-zyP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,7 +122,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundLightTheme" width="839.33331298828125" height="1491.6666259765625"/>
+        <image name="background" width="839.33331298828125" height="1491.6666259765625"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
     </resources>
