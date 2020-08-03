@@ -20,11 +20,16 @@ struct WeatherManager{
     var delegate: WeatherManagerDelegate?
     
     func getWeatherInfo(cityName: String){
-        let url = weatherUrl + "&q=" + cityName;
-        performRequest(with: url, cityName: cityName)
+        let url = weatherUrl + "&q=" + cityName
+        performRequest(with: url)
     }
     
-    func performRequest(with urlString: String, cityName: String){
+    func getWeatherInfo(latitude: Double, longitude: Double){
+        let url = weatherUrl + "&lat=\(latitude)&lon=\(longitude)"
+        performRequest(with: url)
+    }
+    
+    func performRequest(with urlString: String){
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             
